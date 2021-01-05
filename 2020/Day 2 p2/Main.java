@@ -2,8 +2,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import javax.xml.stream.events.Characters;
-
 public class Main {
     public static void main(String[] args) {
         int numValidPasswords = 0;  // number of valid passwords, SOLUTION
