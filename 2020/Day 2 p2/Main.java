@@ -12,22 +12,23 @@ public class Main {
                 String data = scanner.nextLine();
                 // MAIN ALGO
                 // NOT ZERO INDEXED, INDEX 1 = INDEX 0
-                char characterCheckAganist = data.charAt(data.indexOf(' ') + 1);   // char to check against
-                char characterAtSpot1 = data.charAt(Integer.parseInt(data.substring(0, data.indexOf('-'))) - 1);   // 1st char that im looking at
-                char characterAtSpot2 = data.charAt(Integer.parseInt(data.substring(data.indexOf('-') + 1, data.indexOf(' '))) - 1);   // 2nd char that im looking at
                 String password = data.substring(data.indexOf(':') + 2);    // passwords only
+                char characterCheckAgainst = data.charAt(data.indexOf(' ') + 1);   // char to check against
+                char characterAtSpot1 = password.charAt(Integer.parseInt(data.substring(0, data.indexOf('-'))) - 1);   // 1st char that im looking at
+                char characterAtSpot2 = password.charAt(Integer.parseInt(data.substring(data.indexOf('-') + 1, data.indexOf(' '))) - 1);   // 2nd char that im looking at
                 boolean characterSeenOnce = false; // false at first, true when i see one charactr, false if i see it again
+
                 // check spot 1
-                if(characterCheckAganist == characterAtSpot1){
+                if(characterCheckAgainst == characterAtSpot1){
                     characterSeenOnce = !characterSeenOnce; // toggles boolean
-                    if(characterCheckAganist == characterAtSpot2){
+                    if(characterCheckAgainst == characterAtSpot2){
                         characterSeenOnce = !characterSeenOnce; // toggles boolean
                     } 
                 }
                 // check spot 2
-                else if(characterCheckAganist == characterAtSpot2){
+                else if(characterCheckAgainst == characterAtSpot2){
                     characterSeenOnce = !characterSeenOnce; // toggles boolean
-                    if(characterCheckAganist == characterAtSpot1){
+                    if(characterCheckAgainst == characterAtSpot1){
                         characterSeenOnce = !characterSeenOnce; // toggles boolean
                     }
                 }
