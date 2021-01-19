@@ -9,7 +9,7 @@ public class Main {
 
         try {
             File inputFile = new File("input.txt");
-            int[] dataArray = new int[(int) inputFile.length()];
+            int[] dataArray = new int[200];
             Scanner scanner = new Scanner(inputFile);
             while (scanner.hasNextLine()) {
                 // put all data into array, need to access all elements
