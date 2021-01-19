@@ -1,4 +1,4 @@
 # Advent of Code
 doing this cuz im bored
 
-Day 2 part 2 WIP
+Day 1 Part 2 WIP
